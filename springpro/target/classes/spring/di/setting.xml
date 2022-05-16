@@ -3,10 +3,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+	
+	<context:annotation-config/>
 	<!-- Exam exam = new NewLecExam(); -->
-	<bean id="exam" class="spring.di.entity.NewLecExam" p:kor="10" p:eng="20">
+	<bean id="exam" class="spring.di.entity.NewLecExam" p:kor="10" p:eng="20"/>
 <!--  	<property name="kor">
 			<value>10</value>
 		</property> => <property name="kor" value="90"/> 같음  
@@ -20,14 +24,13 @@
 		<constructor-arg index="3" value="50"/>
 		 다른방식 
 		<constructor-arg name="eng" type="int" value="20"/> -->
-	</bean>
 	
 	<!-- ExamConsole console = new GridExamConsole(); -->
 	<bean id="console" class="spring.di.ui.GridExamConsole">
 		<!-- console.setExam(exam); 
-		name : setter 함수 ref:참조 변수-->
-		<property name="exam" ref="exam"/>
-	</bean>
+		name : setter 함수 ref:참조 변수
+		<property name="exam" ref="exam"/> -->
+	</bean> 
 	
 	<!-- 정적인 방식으로 객체를 만들어 초기화 -->
 	<util:list id="exams" list-class="java.util.ArrayList">

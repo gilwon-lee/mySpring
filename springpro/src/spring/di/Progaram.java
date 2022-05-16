@@ -25,17 +25,17 @@ public class Progaram {
 		ApplicationContext context = 
 				new ClassPathXmlApplicationContext("spring/di/setting.xml");
 		//ExamConsole console =(ExamConsole) context.getBean("console");
-		Exam exam = context.getBean(Exam.class);
-		System.out.println(exam.toString());
+//		Exam exam = context.getBean(Exam.class);
+//		System.out.println(exam.toString());
 		ExamConsole console =context.getBean(ExamConsole.class);
 		console.print();
 
 //		List<Exam> exams =new ArrayList<>();
-		List<Exam> exams = (List<Exam>) context.getBean("exams");
+//		List<Exam> exams = (List<Exam>) context.getBean("exams");
 //		exams.add(new NewLecExam(1,1,1,1));
 		
-		for(Exam e : exams)
-			System.out.println(e);
+//		for(Exam e : exams)
+//			System.out.println(e);
 	}
 
 }
