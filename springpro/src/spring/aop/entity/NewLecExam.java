@@ -1,16 +1,9 @@
-package spring.di.entity;
+package spring.aop.entity;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-
-//@Component => 컴포넌트 지정 및 이름 지정(Bean의 id와 비슷)
-@Component("exam")
 public class NewLecExam implements Exam {
 	
-	//@Value => 초기값 지정
-	@Value("20")
+
 	private int kor;
-	@Value("30")
 	private int eng;
 	private int math;
 	private int com;
@@ -28,12 +21,32 @@ public class NewLecExam implements Exam {
 
 	@Override
 	public int total() {
-		return kor+eng+math+com;
+		
+//		long start = System.currentTimeMillis();
+		
+		int result = kor+eng+math+com;
+		if(kor>100) {
+			throw new IllegalArgumentException("유효하지 않은 점수");
+		}
+		try {
+		Thread.sleep(200);
+		}catch(InterruptedException e){
+			e.printStackTrace();
+		}
+		
+//		long end = System.currentTimeMillis();
+//		String message = (end-start)+ "ms 시간" ;
+//		System.out.println(message);
+		
+		return result;
 	}
 
 	@Override
 	public float avg() {
-		return total()/4.0f;
+		
+		float result =total()/4.0f;
+		
+		return result;
 	}
 
 	public int getKor() {
