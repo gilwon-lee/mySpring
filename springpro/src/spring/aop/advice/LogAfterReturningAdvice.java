@@ -9,7 +9,7 @@ public class LogAfterReturningAdvice implements AfterReturningAdvice {
 	@Override
 	public void afterReturning(Object returnValue, Method method, Object[] args, Object target) throws Throwable {
 		// TODO Auto-generated method stub
-		System.out.println("ÇÔ¼ö ¸®ÅÏ°ªÀ» ¹Ş´Â ·ÎÁ÷");
+		System.out.println("í•¨ìˆ˜ ë¦¬í„´ê°’ì„ ë°›ëŠ” ë¡œì§");
 		System.out.println("returnValue : "+returnValue);
 	}
 

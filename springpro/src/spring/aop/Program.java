@@ -20,8 +20,8 @@ public class Program {
 		System.out.println("avg is "+proxy.avg());
 		
 		
-//		ÀÚ¹Ù AOP ±¸Çö
-//		Proxy.newProxyInstance(½ÇÁúÀûÀÎ °´Ã¼, ±¸Çö ÇÒ ÀÎÅÍÆäÀÌ½ºµé ¸ğÀ½, InvocationHandler())
+//		ìë°” AOP êµ¬í˜„
+//		Proxy.newProxyInstance(ì‹¤ì§ˆì ì¸ ê°ì²´, êµ¬í˜„ í•  ì¸í„°í˜ì´ìŠ¤ë“¤ ëª¨ìŒ, InvocationHandler())
 //		Exam proxy = (Exam) Proxy.newProxyInstance(NewLecExam.class.getClassLoader(),
 //				new Class[] {Exam.class},
 //				new InvocationHandler() {
@@ -37,11 +37,11 @@ public class Program {
 //						}catch(InterruptedException e){
 //							e.printStackTrace();
 //						}
-//						½ÇÁ¦ ½ÇÇà Å¬·¡½º(ÇÔ¼ö)
+//						ì‹¤ì œ ì‹¤í–‰ í´ë˜ìŠ¤(í•¨ìˆ˜)
 //						Object result =  method.invoke(exam, args);
 //						
 //						long end = System.currentTimeMillis();
-//						String message = (end-start)+ "ms ½Ã°£" ;
+//						String message = (end-start)+ "ms ì‹œê°„" ;
 //						System.out.println(message);
 //						
 //						return result;

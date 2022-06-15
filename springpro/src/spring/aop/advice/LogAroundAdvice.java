@@ -8,14 +8,14 @@ public class LogAroundAdvice implements MethodInterceptor{
 	@Override
 	public Object invoke(MethodInvocation invocation) throws Throwable {
 		
-		System.out.println("¾Õ µÚ¿¡¼­ ½ÇÇàµÉ ·ÎÁ÷");
+		System.out.println("ì• ë’¤ì—ì„œ ì‹¤í–‰ë  ë¡œì§");
 		
 		long start = System.currentTimeMillis();
 //		Object result =  method.invoke(exam, args);
 		Object result = invocation.proceed();
 		
 		long end = System.currentTimeMillis();
-		String message = (end-start)+ "ms ½Ã°£" ;
+		String message = (end-start)+ "ms ì‹œê°„" ;
 		System.out.println(message);
 		
 		return result;
